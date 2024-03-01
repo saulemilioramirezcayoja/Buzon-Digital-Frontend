@@ -1,0 +1,22 @@
+<p-progressSpinner *ngIf="isLoading" styleClass="loading-spinner"></p-progressSpinner>
+
+<p-message *ngIf="error" severity="error" text="{{error}}" styleClass="error-message"></p-message>
+
+<p-fieldset *ngIf="!isLoading && !error" legend="Información del Usuario" aria-label="Información del Usuario">
+    <div class="p-fluid">
+        <div class="p-field">
+            <label for="name" aria-label="Nombre del usuario">Nombre</label>
+            <input id="name" type="text" pInputText [(ngModel)]="user.name" disabled aria-disabled="true" />
+        </div>
+        <p-divider></p-divider>
+        <div class="p-field">
+            <label for="email" aria-label="Correo Electrónico del usuario">Correo Electrónico</label>
+            <input id="email" type="text" pInputText [(ngModel)]="user.email" disabled aria-disabled="true" />
+        </div>
+        <p-divider></p-divider>
+        <div class="p-field">
+            <label for="role" aria-label="Rol del usuario">Rol</label>
+            <input id="role" type="text" pInputText [(ngModel)]="user.role" disabled aria-disabled="true" />
+        </div>
+    </div>
+</p-fieldset>
