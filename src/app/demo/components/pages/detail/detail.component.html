@@ -1,0 +1,84 @@
+<div class="card">
+    <p-fieldset legend="Información General" [toggleable]="true">
+        <div class="p-grid p-fluid">
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>ID de la Solicitud:</strong></label>
+                    <p>{{requestDetails?.requestId}}</p>
+                </div>
+            </div>
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>Estado:</strong></label>
+                    <p>{{requestDetails?.state}}</p>
+                </div>
+            </div>
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>Fecha de Creación:</strong></label>
+                    <p>{{requestDetails?.creationDate | date: 'medium'}}</p>
+                </div>
+            </div>
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>Fecha de Actualización:</strong></label>
+                    <p>{{requestDetails?.updateDate | date: 'medium'}}</p>
+                </div>
+            </div>
+        </div>
+    </p-fieldset>
+
+    <p-fieldset legend="Información del Solicitante" [toggleable]="true">
+        <div class="p-grid">
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>Nombre:</strong></label>
+                    <p>{{requestDetails?.applicantName}}</p>
+                </div>
+            </div>
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>ID:</strong></label>
+                    <p>{{requestDetails?.applicantId}}</p>
+                </div>
+            </div>
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>Email:</strong></label>
+                    <p>{{requestDetails?.applicantEmail}}</p>
+                </div>
+            </div>
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>Teléfono:</strong></label>
+                    <p>{{requestDetails?.applicantPhone}}</p>
+                </div>
+            </div>
+        </div>
+    </p-fieldset>
+
+    <p-fieldset>
+        <p-tabView>
+            <p-tabPanel header="Información Adicional">
+                <div class="p-grid">
+                    <div class="p-col-12">
+                        <div class="p-field">
+                            <label><strong>Comentario:</strong></label>
+                            <p>{{requestDetails?.comment}}</p>
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="Requisitos Adicionales">
+                <div class="p-grid">
+                    <div class="p-col-12">
+                        <div class="p-field">
+                            <label><strong>Requisitos Adicionales:</strong></label>
+                            <p>{{requestDetails?.additionalRequirements}}</p>
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+    </p-fieldset>
+</div>

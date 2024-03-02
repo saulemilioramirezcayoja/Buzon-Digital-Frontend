@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { RequestService } from 'src/app/demo/service/request.service';
 
@@ -11,10 +12,14 @@ import { RequestService } from 'src/app/demo/service/request.service';
 export class ListComponent implements OnInit {
     requests: Request[] = [];
 
-    constructor(private requestService: RequestService) { }
+    constructor(private router: Router, private requestService: RequestService) { }
 
     ngOnInit(): void {
         this.loadRequests();
+    }
+
+    onSelectRequest(requestId: number): void {
+        this.router.navigate(['/pages/detail', requestId]);
     }
 
     loadRequests(): void {

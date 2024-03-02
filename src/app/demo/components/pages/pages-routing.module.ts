@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
     imports: [RouterModule.forChild([
         { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
         { path: 'list', loadChildren: () => import('./list/list.module').then(m => m.ListModule) },
+        { path: 'detail/:id', loadChildren: () => import('./detail/detail.module').then(m => m.DetailModule) },
         { path: '**', redirectTo: '/notfound' }
     ])],
     exports: [RouterModule]

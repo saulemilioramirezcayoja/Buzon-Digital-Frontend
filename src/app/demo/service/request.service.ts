@@ -24,4 +24,13 @@ export class RequestService {
 
         return this.http.get<Request[]>(`${this.baseUrl}/by-organization`, { headers });
     }
+
+    getRequestById(id: number): Observable<any> {
+        const token = this.authService.currentUserValue?.token;
+        const headers = new HttpHeaders({
+            'Authorization': `Bearer ${token}`
+        });
+
+        return this.http.get<Request>(`${this.baseUrl}/${id}`, { headers });
+    }
 }

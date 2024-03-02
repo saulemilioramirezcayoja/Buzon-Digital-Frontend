@@ -17,7 +17,12 @@
         </ng-template>
         <ng-template pTemplate="body" let-request>
             <tr>
-                <td>{{ request.requestId }}</td>
+                <td>
+                    <button pButton pRipple type="button" (click)="onSelectRequest(request.requestId)"
+                        class="p-button-text">
+                        {{ request.requestId }}
+                    </button>
+                </td>
                 <td>{{ request.applicantName }}</td>
                 <td>{{ request.applicantEmail }}</td>
                 <td>{{ request.applicantPhone }}</td>
