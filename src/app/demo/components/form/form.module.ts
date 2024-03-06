@@ -17,6 +17,7 @@ import { InputTextModule } from "primeng/inputtext";
 import { ToastModule } from "primeng/toast";
 import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ButtonModule } from 'primeng/button';
 		ToastModule,
 		ToolbarModule,
 		ReactiveFormsModule,
-		ButtonModule
+		ButtonModule,
+		CardModule
 	],
 	declarations: [FormComponent]
 })
