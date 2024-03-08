@@ -33,52 +33,44 @@
             <div class="p-col-12 p-md-6">
                 <div class="p-field">
                     <label><strong>Nombre:</strong></label>
-                    <p>{{requestDetails?.applicantName}}</p>
-                </div>
-            </div>
-            <div class="p-col-12 p-md-6">
-                <div class="p-field">
-                    <label><strong>ID:</strong></label>
-                    <p>{{requestDetails?.applicantId}}</p>
+                    <p>{{requestDetails?.firstName}} {{requestDetails?.lastName}}</p>
                 </div>
             </div>
             <div class="p-col-12 p-md-6">
                 <div class="p-field">
                     <label><strong>Email:</strong></label>
-                    <p>{{requestDetails?.applicantEmail}}</p>
+                    <p>{{requestDetails?.email}}</p>
                 </div>
             </div>
             <div class="p-col-12 p-md-6">
                 <div class="p-field">
                     <label><strong>Teléfono:</strong></label>
-                    <p>{{requestDetails?.applicantPhone}}</p>
+                    <p>{{requestDetails?.phoneNumber}}</p>
+                </div>
+            </div>
+            <div class="p-col-12 p-md-6">
+                <div class="p-field">
+                    <label><strong>Dirección:</strong></label>
+                    <p>{{requestDetails?.address}}</p>
+                </div>
+            </div>
+            <div class="p-col-12">
+                <div class="p-field">
+                    <label><strong>Organización:</strong></label>
+                    <p>{{requestDetails?.organizationName}}</p>
                 </div>
             </div>
         </div>
     </p-fieldset>
 
-    <p-fieldset>
-        <p-tabView>
-            <p-tabPanel header="Información Adicional">
-                <div class="p-grid">
-                    <div class="p-col-12">
-                        <div class="p-field">
-                            <label><strong>Comentario:</strong></label>
-                            <p>{{requestDetails?.comment}}</p>
-                        </div>
-                    </div>
+    <p-fieldset legend="Información Adicional" [toggleable]="true">
+        <div class="p-grid">
+            <div class="p-col-12">
+                <div class="p-field">
+                    <label><strong>Comentario:</strong></label>
+                    <p>{{requestDetails?.comment}}</p>
                 </div>
-            </p-tabPanel>
-            <p-tabPanel header="Requisitos Adicionales">
-                <div class="p-grid">
-                    <div class="p-col-12">
-                        <div class="p-field">
-                            <label><strong>Requisitos Adicionales:</strong></label>
-                            <p>{{requestDetails?.additionalRequirements}}</p>
-                        </div>
-                    </div>
-                </div>
-            </p-tabPanel>
-        </p-tabView>
+            </div>
+        </div>
     </p-fieldset>
 </div>

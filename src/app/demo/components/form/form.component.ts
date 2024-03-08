@@ -23,11 +23,12 @@ export class FormComponent implements OnInit {
         this.requestForm = this.fb.group({
             state: ['received', Validators.required],
             comment: ['Revisión inicial pendiente', Validators.required],
-            applicantName: ['', Validators.required],
-            applicantId: ['', Validators.required],
-            applicantEmail: ['', [Validators.required, Validators.email]],
-            applicantPhone: ['', Validators.required],
-            additionalRequirements: [''],
+            firstName: ['', Validators.required],
+            lastName: ['', Validators.required],
+            email: ['', [Validators.required, Validators.email]],
+            phoneNumber: ['', Validators.maxLength(20)],
+            address: ['', Validators.maxLength(255)],
+            organizationName: ['', Validators.required],
         });
     }
 

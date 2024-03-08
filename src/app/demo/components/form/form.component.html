@@ -12,25 +12,29 @@
             <div class="card">
                 <h5>Solicitud de Trámite Digital</h5>
                 <form [formGroup]="requestForm" (ngSubmit)="onSubmit()" class="p-fluid p-formgrid grid">
+                    <div class="field col-12 md:col-6">
+                        <label for="firstName">Nombre:</label>
+                        <input pInputText id="firstName" formControlName="firstName" />
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="lastName">Apellido:</label>
+                        <input pInputText id="lastName" formControlName="lastName" />
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="email">Email:</label>
+                        <input pInputText id="email" formControlName="email" />
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="phoneNumber">Teléfono:</label>
+                        <input pInputText id="phoneNumber" formControlName="phoneNumber" />
+                    </div>
                     <div class="field col-12">
-                        <label for="additionalRequirements">Requisitos Adicionales</label>
-                        <input pInputText id="additionalRequirements" formControlName="additionalRequirements">
+                        <label for="address">Dirección:</label>
+                        <input pInputText id="address" formControlName="address" />
                     </div>
-                    <div class="field col-12 md:col-6">
-                        <label for="applicantName">Nombre :</label>
-                        <input pInputText id="applicantName" formControlName="applicantName" />
-                    </div>
-                    <div class="field col-12 md:col-6">
-                        <label for="applicantId">Carnet de Identidad :</label>
-                        <input pInputText id="applicantId" formControlName="applicantId" />
-                    </div>
-                    <div class="field col-12 md:col-6">
-                        <label for="applicantEmail">Email :</label>
-                        <input pInputText id="applicantEmail" formControlName="applicantEmail" />
-                    </div>
-                    <div class="field col-12 md:col-6">
-                        <label for="applicantPhone">Teléfono :</label>
-                        <input pInputText id="applicantPhone" formControlName="applicantPhone" />
+                    <div class="field col-12">
+                        <label for="organizationName">Nombre de la Organización:</label>
+                        <input pInputText id="organizationName" formControlName="organizationName" />
                     </div>
                     <div class="field col-12">
                         <button type="submit" pButton label="Enviar" [disabled]="!requestForm.valid"></button>

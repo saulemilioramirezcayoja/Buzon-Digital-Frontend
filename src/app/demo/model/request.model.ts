@@ -6,13 +6,14 @@ export interface Request {
     organization: Organization;
     state: string;
     creationDate: string;
-    updateDate: string;
+    updateDate: string | null;
     closedDate: string | null;
     trackingCodeId: number | null;
-    comment: string;
-    applicantName: string;
-    applicantId: string;
-    applicantEmail: string;
-    applicantPhone: string;
-    additionalRequirements: string;
+    comment: string | null;
+    firstName: string;
+    lastName: string;
+    email: string;
+    phoneNumber: string | null;
+    address: string | null;
+    organizationName: string | null;
 }

@@ -7,12 +7,13 @@
                 <th>Nombre del Solicitante</th>
                 <th>Email del Solicitante</th>
                 <th>Teléfono del Solicitante</th>
+                <th>Dirección del Solicitante</th>
+                <th>Nombre de la Organización</th>
                 <th>Estado</th>
                 <th>Fecha de Creación</th>
                 <th>Fecha de Actualización</th>
                 <th>Fecha de Cierre</th>
                 <th>Comentario</th>
-                <th>Requisitos Adicionales</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-request>
@@ -23,15 +24,16 @@
                         {{ request.requestId }}
                     </button>
                 </td>
-                <td>{{ request.applicantName }}</td>
-                <td>{{ request.applicantEmail }}</td>
-                <td>{{ request.applicantPhone }}</td>
+                <td>{{ request.firstName }} {{ request.lastName }}</td>
+                <td>{{ request.email }}</td>
+                <td>{{ request.phoneNumber }}</td>
+                <td>{{ request.address }}</td>
+                <td>{{ request.organizationName }}</td>
                 <td>{{ request.state }}</td>
                 <td>{{ request.creationDate | date:'short' }}</td>
                 <td>{{ request.updateDate | date:'short' }}</td>
                 <td>{{ request.closedDate ? (request.closedDate | date:'short') : 'N/A' }}</td>
                 <td>{{ request.comment }}</td>
-                <td>{{ request.additionalRequirements }}</td>
             </tr>
         </ng-template>
     </p-table>
