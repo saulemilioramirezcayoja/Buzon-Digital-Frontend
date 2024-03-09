@@ -1,0 +1,60 @@
+<header class="app-header">
+    <div class="header-content">
+        <img src="assets/layout/images/logo.png" alt="logo" class="header-logo">
+        <span>Certificaciones Digitales Digicert</span>
+    </div>
+</header>
+
+<div class="form-container">
+    <div class="grid">
+        <div class="col-12">
+            <div class="card px-6 py-6">
+                <h5 class="m-0">Ingrese su número de trámite</h5>
+                <div class="flex flex-column md:flex-row align-items-center mb-4">
+                    <span class="block mt-2 mr-3">
+                        Código de seguimiento:
+                        <input type="text" placeholder="Buscar..." pInputText [(ngModel)]="code" />
+                    </span>
+                    <span class="block mt-2">
+                        <button pButton label="Buscar" (click)="search()" styleClass="p-button-outlined"></button>
+                    </span>
+                </div>
+                <p-table [value]="requests" *ngIf="requests.length > 0" dataKey="requestId">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Código de Seguimiento</th>
+                            <th>Nombre del Solicitante</th>
+                            <th>Email del Solicitante</th>
+                            <th>Teléfono</th>
+                            <th>Dirección</th>
+                            <th>Nombre de la Organización</th>
+                            <th>Estado</th>
+                            <th>Fecha de Creación</th>
+                            <th>Comentario</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-request>
+                        <tr>
+                            <td>{{ request.trackingCodeId }}</td>
+                            <td>{{ request.firstName }} {{ request.lastName }}</td>
+                            <td>{{ request.email }}</td>
+                            <td>{{ request.phoneNumber }}</td>
+                            <td>{{ request.address }}</td>
+                            <td>{{ request.organizationName }}</td>
+                            <td>{{ request.state }}</td>
+                            <td>{{ request.creationDate | date:'dd/MM/yyyy' }}</td>
+                            <td>{{ request.comment }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+                <p *ngIf="requests.length === 0" class="mt-4">No se encontró la solicitud.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="app-footer">
+    <div class="footer-content">
+        <img src="assets/layout/images/logo.png" alt="logo" class="footer-logo">
+    </div>
+</footer>

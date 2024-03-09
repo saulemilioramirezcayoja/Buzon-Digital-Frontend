@@ -16,6 +16,7 @@ import { AuthGuard } from './demo/api/auth.guard';
                     { path: 'pages', loadChildren: () => import('./demo/components/pages/pages.module').then(m => m.PagesModule) }
                 ]
             },
+            { path: 'tracking', loadChildren: () => import('./demo/components/tracking/tracking.module').then(m => m.TrackingModule) },
             { path: 'auth', loadChildren: () => import('./demo/components/auth/auth.module').then(m => m.AuthModule) },
             { path: 'form', loadChildren: () => import('./demo/components/form/form.module').then(m => m.FormModule) },
             { path: 'notfound', component: NotfoundComponent },

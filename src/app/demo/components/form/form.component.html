@@ -1,52 +1,54 @@
-<header class="app-header">
-    <div class="header-content">
-        <img src="assets/layout/images/logo.png" alt="logo" class="header-logo">
-        <span>Certificaciones Digitales Digicert</span>
-    </div>
-</header>
+<div class="body-content">
+    <header class="app-header">
+        <div class="header-content">
+            <img src="assets/layout/images/logo.png" alt="logo" class="header-logo">
+            <span>Certificaciones Digitales Digicert</span>
+        </div>
+    </header>
 
-<div class="form-container">
-    <p-toast></p-toast>
-    <div class="grid">
-        <div class="col-12">
-            <div class="card">
-                <h5>Solicitud de Trámite Digital</h5>
-                <form [formGroup]="requestForm" (ngSubmit)="onSubmit()" class="p-fluid p-formgrid grid">
-                    <div class="field col-12 md:col-6">
-                        <label for="firstName">Nombre:</label>
-                        <input pInputText id="firstName" formControlName="firstName" />
-                    </div>
-                    <div class="field col-12 md:col-6">
-                        <label for="lastName">Apellido:</label>
-                        <input pInputText id="lastName" formControlName="lastName" />
-                    </div>
-                    <div class="field col-12 md:col-6">
-                        <label for="email">Email:</label>
-                        <input pInputText id="email" formControlName="email" />
-                    </div>
-                    <div class="field col-12 md:col-6">
-                        <label for="phoneNumber">Teléfono:</label>
-                        <input pInputText id="phoneNumber" formControlName="phoneNumber" />
-                    </div>
-                    <div class="field col-12">
-                        <label for="address">Dirección:</label>
-                        <input pInputText id="address" formControlName="address" />
-                    </div>
-                    <div class="field col-12">
-                        <label for="organizationName">Nombre de la Organización:</label>
-                        <input pInputText id="organizationName" formControlName="organizationName" />
-                    </div>
-                    <div class="field col-12">
-                        <button type="submit" pButton label="Enviar" [disabled]="!requestForm.valid"></button>
-                    </div>
-                </form>
+    <div class="form-container">
+        <p-toast></p-toast>
+        <div class="grid">
+            <div class="col-12">
+                <div class="card">
+                    <h5>Solicitud de Trámite Digital</h5>
+                    <form [formGroup]="requestForm" (ngSubmit)="onSubmit()" class="p-fluid p-formgrid grid">
+                        <div class="field col-12 md:col-6">
+                            <label for="firstName">Nombre:</label>
+                            <input pInputText id="firstName" formControlName="firstName" />
+                        </div>
+                        <div class="field col-12 md:col-6">
+                            <label for="lastName">Apellido:</label>
+                            <input pInputText id="lastName" formControlName="lastName" />
+                        </div>
+                        <div class="field col-12 md:col-6">
+                            <label for="email">Email:</label>
+                            <input pInputText id="email" formControlName="email" />
+                        </div>
+                        <div class="field col-12 md:col-6">
+                            <label for="phoneNumber">Teléfono:</label>
+                            <input pInputText id="phoneNumber" formControlName="phoneNumber" />
+                        </div>
+                        <div class="field col-12">
+                            <label for="address">Dirección:</label>
+                            <input pInputText id="address" formControlName="address" />
+                        </div>
+                        <div class="field col-12">
+                            <label for="organizationName">Nombre de la Organización:</label>
+                            <input pInputText id="organizationName" formControlName="organizationName" />
+                        </div>
+                        <div class="field col-12">
+                            <button type="submit" pButton label="Enviar" [disabled]="!requestForm.valid"></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<footer class="app-footer">
-    <div class="footer-content">
-        <img src="assets/layout/images/logo.png" alt="logo" class="footer-logo">
-    </div>
-</footer>
+    <footer class="app-footer">
+        <div class="footer-content">
+            <img src="assets/layout/images/logo.png" alt="logo" class="footer-logo">
+        </div>
+    </footer>
+</div>

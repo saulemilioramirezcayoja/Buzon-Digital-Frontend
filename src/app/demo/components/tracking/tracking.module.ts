@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormRoutingModule } from './form-routing.module';
-import { FormComponent } from './form.component';
+import { TrackingRoutingModule } from './tracking-routing.module';
+import { TrackingComponent } from './tracking.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutoCompleteModule } from "primeng/autocomplete";
@@ -18,12 +18,13 @@ import { ToastModule } from "primeng/toast";
 import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import {TableModule} from "primeng/table";
 
 
 @NgModule({
 	imports: [
 		CommonModule,
-		FormRoutingModule,
+		TrackingRoutingModule,
 		FormsModule,
 		AutoCompleteModule,
 		CalendarModule,
@@ -39,8 +40,9 @@ import { CardModule } from 'primeng/card';
 		ToolbarModule,
 		ReactiveFormsModule,
 		ButtonModule,
-		CardModule
+		CardModule,
+		TableModule
 	],
-	declarations: [FormComponent]
+	declarations: [TrackingComponent]
 })
-export class FormModule { }
+export class TrackingModule { }

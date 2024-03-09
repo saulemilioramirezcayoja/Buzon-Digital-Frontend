@@ -10,7 +10,7 @@ import { Request } from '../model/request.model';
 export class RequestService {
     private baseUrl = 'http://localhost:8080/api/requests';
 
-    constructor(private http: HttpClient, private authService: AuthService) {}
+    constructor(private http: HttpClient, private authService: AuthService) { }
 
     getRequests(): Observable<any> {
         return this.http.get(`${this.baseUrl}`);
