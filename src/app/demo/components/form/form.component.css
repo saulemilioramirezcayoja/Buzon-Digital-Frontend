@@ -39,8 +39,7 @@ span {
     text-align: center;
     margin-top: 20px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    position: relative;
 }
 
 .app-footer::after {

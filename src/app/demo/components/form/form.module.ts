@@ -18,6 +18,7 @@ import { ToastModule } from "primeng/toast";
 import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { FileUploadModule } from 'primeng/fileupload';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { CardModule } from 'primeng/card';
 		ToolbarModule,
 		ReactiveFormsModule,
 		ButtonModule,
-		CardModule
+		CardModule,
+		FileUploadModule
 	],
 	declarations: [FormComponent]
 })

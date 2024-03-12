@@ -3,6 +3,7 @@ export interface Organization {
 }
 
 export interface Request {
+    requestId?: number;
     organization: Organization;
     state: string;
     creationDate: string;
